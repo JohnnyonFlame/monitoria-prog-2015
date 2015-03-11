@@ -111,7 +111,7 @@ void matriz_print()
 void vetor_ler()
 {
     int i, v;
-    ler_dados("Indice [0..2]: ", "%i", &i);
+    ler_dados("Indice [0..8]: ", "%i", &i);
 
     if (i>8)
     {
