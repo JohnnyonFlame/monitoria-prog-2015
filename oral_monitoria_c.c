@@ -74,8 +74,8 @@ void matriz_ler()
         return;
     }
 
-    ler_dados("Valor da posicao [0...99]: ", "%i", &v);
-    if ((v<0) || (v>99))
+    ler_dados("Valor da posicao [0...999]: ", "%i", &v);
+    if ((v<0) || (v>999))
     {
         printf("Valor invalido.\n");
         sleep(1);
@@ -90,14 +90,18 @@ void matriz_print()
     int i, j;
 
     printf("Representacao por matriz:\n");
+    printf("i/j [0] [1] [2]\n");
+
     for (i=0; i<3; i++)
     {
+        printf ("[%i] ", i);
+
         for (j=0; j<3; j++)
         {
             if (matriz[i][j] > 0)
-                printf("%02i ", matriz[i][j]);
+                printf("%03i ", matriz[i][j]);
             else
-                printf( "xx ");
+                printf( "xxx ");
         }
 
         printf("\n");
@@ -116,8 +120,8 @@ void vetor_ler()
         return;
     }
 
-    ler_dados("Valor da posicao [0...99]: ", "%i", &v);
-    if ((v<0) || (v>99))
+    ler_dados("Valor da posicao [0...999]: ", "%i", &v);
+    if ((v<0) || (v>999))
     {
         printf("Valor invalido.\n");
         sleep(1);
@@ -132,12 +136,14 @@ void vetor_print()
     int i;
 
     printf("Representacao por vetor:\n");
+    printf("[0] [1] [2] [3] [4] [5] [6] [7] [8]\n");
+
     for (i=0; i<9; i++)
     {
         if (vetor[i] > 0)
-            printf("%02i ", vetor[i]);
+            printf("%03i ", vetor[i]);
         else
-            printf( "xx ");
+            printf( "xxx ");
     }
 
     printf("\n");
